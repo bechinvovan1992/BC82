@@ -1,0 +1,30 @@
+/* selector */
+h2{
+    background-color: aqua;
+    color: black;
+    text-align: right;
+}
+
+#tieude{
+    background-color: aqua;
+    font-size: 40px;
+}
+.demo1{
+    background-color: yellow;
+
+}
+
+/* parent trong css */
+div p b {
+    background-color: aquamarine;
+}
+
+/* parent trong css */
+div h2 {
+    background-color: rgb(18, 20, 19);
+}
+
+/* parent trong css */
+div h2 {
+    background-color: rgb(18, 233, 125);
+}

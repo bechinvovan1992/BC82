@@ -1,0 +1,461 @@
+/* css mặc định  */
+/* reset css  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Oswald", serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* header { */
+/* vh (viewport height) 100vh */
+/* vw (viewport width) 100vw */
+/* height: 100vh;
+  background-color: black;
+  display: flex; */
+/* trục chính : trục ngang  */
+/* trục phụ : trục dọc  */
+/* justify-content: center; */
+/* justify-content: space-between; */
+/* align-items: flex-end; */
+/* flex-direction: column-reverse; */
+/* align-items: center; */
+/* } */
+
+/* công thức tính chiều dài và chiều cao của một thẻ html  */
+/* chiều dài = width + padding-left + padding-right + border-left + border-right */
+/* 150 + 10  + 2 + 2 ==> 164px */
+
+/* width = nội dung bên trong + padding-left + padding-right + border-left + border-right */
+
+/* 4 khối hộp width: 25% + 10px */
+/* 100% + 40px */
+
+/* .header-logo {
+  width: 150px;
+  height: 150px; */
+/* background-color: red; */
+/* margin: 50px;
+  padding-top: 20px;
+  padding-left: 10px;
+  border: 2px solid red;
+  box-sizing: border-box; */
+/* border-width: ; */
+/* border-style: ; */
+/* border-color: ; */
+/* } */
+
+/* .header-navigation {
+  width: 150px;
+  height: 150px;
+  background-color: blue;
+} */
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.section-padding {
+  padding: 80px 0;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.214);
+}
+
+header .header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+}
+
+header nav a:hover {
+  color: #e62b4a;
+}
+
+header nav .active a {
+  color: #e62b4a;
+}
+
+header nav li {
+  display: inline-block;
+  margin-right: 20px;
+  font-size: 17px;
+  text-transform: uppercase;
+}
+
+header .header-content-logo {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+/* hero-banner  */
+.hero-banner {
+  height: 80vh;
+  background-image: url(./../img/home_slider.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-banner button {
+  border: none;
+  padding: 10px 30px;
+  background-color: #e62b4a;
+  text-transform: uppercase;
+  color: white;
+  font-size: 16px;
+  font-weight: 300;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.hero-banner .sub-title {
+  font-size: 25px;
+}
+
+.hero-banner h1 {
+  font-size: 75px;
+  line-height: 83px;
+  margin-bottom: 15px;
+}
+
+.hero-banner button:hover {
+  background-color: #af2239;
+}
+
+.hero-banner i {
+  animation-name: arrowGoDown;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-delay: 10s;
+}
+
+/* service  */
+.service {
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+.service .sub-title {
+  color: #e62b4a;
+  font-size: 14px;
+}
+
+.service h2 {
+  font-size: 50px;
+}
+
+.service .service-title p:last-of-type {
+  color: #888888;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.service .service-content .content-item {
+  background-color: white;
+  color: black;
+  height: 230px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.service .service-content .content-item i {
+  font-size: 50px;
+}
+
+.service .service-content .content-item p {
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.service .service-content .content-item-wrapper {
+  padding: 0 10px;
+}
+
+.service .content-item {
+  position: relative;
+}
+
+.service .content-item::before {
+  content: "";
+  display: inline-block;
+  height: 0;
+  width: 5px;
+  background-color: #e62b4a;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: all 0.5s;
+}
+
+.service .content-item:hover::before {
+  height: 100%;
+}
+
+.service .slick-dots li button:before {
+  font-size: 15px;
+  color: white;
+}
+
+.service .slick-dots .slick-active button:before {
+  color: #e62b4a;
+}
+
+/* blog  */
+.blog .blog-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.blog .blog-content img {
+  width: 100%;
+  filter: grayscale(50%) contrast(50%);
+  height: 100%;
+  object-fit: cover;
+}
+
+.blog .blog-content .blog-content-item:first-of-type {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+}
+
+.blog .blog-content .blog-content-item:last-of-type {
+  grid-column: 3 / span 2;
+  grid-row: 3 / span 2;
+}
+
+.blog .blog-content .blog-content-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.blog .blog-content-item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(255, 0, 0, 0.491);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 25px;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.blog .blog-content-item .overlay .overlay-icon {
+  text-align: right;
+  transform: translateY(100px);
+  transition: all 0.5s;
+}
+
+.blog .blog-content-item .overlay .overlay-text {
+  transform: translateY(100px);
+  transition: all 0.5s;
+}
+
+.blog .blog-content-item:hover .overlay {
+  opacity: 1;
+}
+
+.blog .blog-content-item:hover .overlay-icon {
+  transform: translateY(0);
+}
+
+.blog .blog-content-item:hover .overlay-text {
+  transform: translateY(0);
+}
+
+/* number  */
+.number {
+  background-color: black;
+  color: white;
+}
+
+.number .number-content {
+  display: flex;
+}
+
+.number .number-content .number-item {
+  flex: 1;
+  text-align: center;
+}
+
+/* digital  */
+.digital {
+  background-image: url(./../img/bussiness_img_1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  background-attachment: fixed;
+}
+
+.digital .sub-title {
+  color: #e62b4a;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.digital h2 {
+  color: white;
+  font-size: 50px;
+  font-weight: 400;
+}
+
+.digital p:last-of-type {
+  color: #888888;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.digital video {
+  width: 100%;
+}
+
+/* contact  */
+.contact .contact-content {
+  display: flex;
+}
+
+.contact .contact-content-left {
+  width: 60%;
+}
+
+.contact .contact-content-right {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contact .contact-content-right input,
+.contact .contact-content-right textarea {
+  padding: 15px;
+  margin-bottom: 30px;
+}
+
+.contact .contact-content-right textarea {
+  flex: 1;
+  resize: none;
+}
+
+.contact .contact-content-right button {
+  padding: 15px 15px;
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.back-to-top-button {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  padding: 5px;
+  background-color: #e62b4a;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.cd-top--is-visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+@keyframes arrowGoDown {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+}
+
+/* demo-position  */
+/* .demo-position {
+  background-color: black;
+  height: 100vh;
+  position: relative;
+} */
+
+/* .demo1 {
+  width: 150px;
+  height: 150px;
+  background-color: red;
+  position: absolute;
+  z-index: 2; */
+/* top , bottom , left , right  */
+/* left: -50px; */
+/* right: -50px; */
+/* top: 50px; */
+/* bottom: 50px; */
+/* left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+} */
+
+/* .demo2 {
+  width: 200px;
+  height: 200px;
+  background-color: blue; */
+/* transform: rotate(45deg); */
+/* position: relative;
+  z-index: 3; */
+/* } */
+
+/* before và after  */
+.demo-before-after {
+  height: 60vh;
+  background-color: pink;
+  position: relative;
+}
+.demo-before-after::before {
+  content: "";
+  width: 150px;
+  height: 100%;
+  display: inline-block;
+  background-color: red;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.demo-before-after::after {
+  content: "";
+  width: 150px;
+  height: 100%;
+  display: inline-block;
+  background-color: blue;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
